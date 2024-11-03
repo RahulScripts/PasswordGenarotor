@@ -45,7 +45,7 @@ class PasswordGenerator:
         ttk.Checkbutton(options_frame, text="Lowercase (a-z)", variable=self.include_lower).pack(anchor=W)
         ttk.Checkbutton(options_frame, text="Uppercase (A-Z)", variable=self.include_upper).pack(anchor=W)
         ttk.Checkbutton(options_frame, text="Numbers (0-9)", variable=self.include_numbers).pack(anchor=W)
-        ttk.Checkbutton(options_frame, text="Special Characters (@#$%&*)", variable=self.include_special).pack(anchor=W)
+        ttk.Checkbutton(options_frame, text="Special Characters (@#$%&_=*)", variable=self.include_special).pack(anchor=W)
         
         # Generate button
         ttk.Button(main_frame, text="Generate Password", command=self.process, style='Accent.TButton').pack(pady=20)
@@ -75,7 +75,7 @@ class PasswordGenerator:
             if self.include_numbers.get():
                 char_sets.append(string.digits)
             if self.include_special.get():
-                char_sets.append('@#$%&*')
+                char_sets.append('@#$%&_=*')
                 
             if not char_sets:
                 messagebox.showwarning("Warning", "Please select at least one character set")
