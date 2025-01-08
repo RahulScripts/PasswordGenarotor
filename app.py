@@ -11,7 +11,8 @@ class PasswordGenerator:
         self.gui.geometry('400x500')
         self.gui.resizable(0,0)
         self.gui.configure(bg='#f0f0f0')
-        self.gui.iconbitmap("c:/Users/halli/Downloads/password generator/icon.png")
+        self.gui.iconbitmap("D:\MYPROJECTS\password generator\icon.ico")
+
 
         # Variables
         self.string_pass = StringVar(value="12")
